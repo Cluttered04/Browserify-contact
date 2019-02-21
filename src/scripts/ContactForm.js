@@ -5,7 +5,7 @@ import printAllContacts from "./ContactList.js";
 
 const contactForm = {
     printsToDom: function() {
-        document.querySelector("#contact-form").innerHTML = `<input type="text" id="name-input"><input type="text" id="phone-input"><input type="text" id="address-input"><button id="submit-button">Submit</button>`
+        document.querySelector("#contact-form").innerHTML = `<input type="text" placeholder="Contact name" id="name-input"><input type="text" id="phone-input" placeholder="Contact Phone"><input type="text" id="address-input" placeholder="Contact Address"><button id="submit-button">Submit</button>`
     },
     submitClick: function() {
         document.querySelector("#contact-form").addEventListener("click", () => {

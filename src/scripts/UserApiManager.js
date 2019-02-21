@@ -20,7 +20,10 @@ const loginManager = {
         .then(results => results.json())
         .then((parsedResponse) => {
             parsedResponse.forEach(contact => {
-                contactComponentBuilder(contact.name, contact.phone, contact.address);
+                if(parsedResponse.length > 0) {
+                    contactComponentBuilder(contact.name, contact.phone, contact.address);
+                } else document.querySelector("#contact").innerHTML = "Please enter a valid username!"
+
             })
 
         })
