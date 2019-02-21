@@ -5,7 +5,8 @@ import contactManager from "./ContactCollection.js";
 import contactComponentBuilder from "./Contact.js";
 
 const printAllContacts = () => {
-    contactManager.loadContact()
+    const userId = sessionStorage.getItem("userId");
+    contactManager.loadContact(userId)
     .then((parsedResponse) => {
         parsedResponse.forEach((contact) => {
             contactComponentBuilder(contact.name, contact.phone, contact.address)

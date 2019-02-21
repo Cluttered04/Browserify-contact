@@ -17,7 +17,8 @@ const contactForm = {
             const contactObject = {
             name: contactName,
             phone: contactPhone,
-            address: contactAddress
+            address: contactAddress,
+            userId: sessionStorage.getItem("userId")
         }
 
         console.log(contactObject);

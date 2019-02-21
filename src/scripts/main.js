@@ -4,7 +4,13 @@
 
 import printAllContacts from "./ContactList.js"
 import contactForm from "./ContactForm.js";
+import buildUserLogin from "./LoginForm.js";
+import userClickEvents from "./UserEventListeners.js";
 
+buildUserLogin();
+userClickEvents.registerEvent();
+userClickEvents.logInEvent();
+userClickEvents.logOutEvent();
 contactForm.printsToDom();
 contactForm.submitClick();
 printAllContacts();
